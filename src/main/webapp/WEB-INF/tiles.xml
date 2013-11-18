@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="mainTemplate" template="/WEB-INF/templates/main_template.jsp">
+        <put-attribute name="title" value="Tiles / mustache example" />
+
+        <put-attribute name="header" value="/WEB-INF/tiles/common/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/common/footer.jsp" />
+    </definition>
+
+    <definition name="WILDCARD:page.*" extends="mainTemplate">
+        <put-attribute name="body" value="/WEB-INF/tiles/pages/{1}/{1}_body.jsp" />
+        <put-attribute name="body.javascript" value="/WEB-INF/tiles/pages/{1}/{1}_javascript.jsp" />
+        <put-attribute name="body.updateable" value="/WEB-INF/tiles/pages/{1}/{1}_updateable.mustache" cascade="true" />
+    </definition>
+</tiles-definitions>
