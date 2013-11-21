@@ -12,3 +12,7 @@
 <div data-random-container>
     <tiles:insertAttribute name="body.updateable" />
 </div>
+
+<button type="button" class="big-button" data-random-control>
+    Generate more randoms!
+</button>
