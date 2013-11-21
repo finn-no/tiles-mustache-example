@@ -28,7 +28,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
     @Bean
     public TilesConfigurer tilesConfigurer() {
         final TilesConfigurer configurer = new TilesConfigurer();
-        configurer.setCompleteAutoload(true);
+        configurer.setCompleteAutoload(true); // required by WILDCARD tiles-definitions and mustache rendering
         return configurer;
     }
 
